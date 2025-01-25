@@ -1,0 +1,4323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--! Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ! Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--! Bootstrap 5 CSS (RTL Support) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+
+    <!--! Css -->
+    <link rel="stylesheet" href="./Css/style.css" />
+    <!-- ! Swiper Css -->
+    <link rel="stylesheet" href="./Css/swiper.min.css" />
+    <link rel="stylesheet" href="./Css/swiper8.min.css" />
+    <!--! Website Title  -->
+    <title>Soul Shop</title>
+  </head>
+  <body>
+    <!-- ! Main Nav -->
+    <div class="sidemenu">
+      <!-- Logo -->
+      <a class="sidemenu-brand-icon" href="#"
+        ><img src="assets/logo-without-name.png" alt="logo"
+      /></a>
+      <div class="main-links">
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="dropdownMenuButton" data-toggle="dropdown">
+            <span class="selected-language">العربية</span>
+            <span class="caret"></span>
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">العربية</a>
+            <a class="dropdown-item" href="#">الإنجليزية</a>
+          </div>
+        </div>
+
+        <!-- Categories Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="categoriesDropdown" data-toggle="dropdown">
+            <span class="selected-category">الأقسام</span>
+            <span class="caret"></span>
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">قسم 1</a>
+            <a class="dropdown-item" href="#">قسم 2</a>
+            <a class="dropdown-item" href="#">قسم 3</a>
+          </div>
+        </div>
+
+        <!-- Country Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="countryDropdown" data-toggle="dropdown">
+            <span class="selected-country">الدولة</span>
+            <img src="assets/ksa.svg" alt="Flag" class="country-flag" />
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">
+              <span>السعودية</span>
+              <img src="assets/ksa.svg" alt="Saudi Flag" class="country-flag" />
+            </a>
+            <a class="dropdown-item" href="#">
+              <span>الإمارات</span>
+              <img src="assets/ksa.svg" alt="UAE Flag" class="country-flag" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <span class="clss"><i class="fas fa-times"></i></span>
+    </div>
+
+    <nav class="navbar d-lg-block d-none navbar-expand-lg bg-white">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/logo.png" alt="logo"
+        /></a>
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Main Content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-flex align-items-center w-100">
+            <!-- Category Buttons -->
+            <div class="category-buttons d-flex gap-3">
+              <button class="category-button active" data-category="clothes">
+                ملابس
+              </button>
+              <button class="category-button" data-category="makeup">
+                ميك أب
+              </button>
+            </div>
+            <!-- Search Box -->
+            <form class="ms-3 search-box position-relative ">
+              <input
+                class="form-control "
+                type="search"
+                placeholder="وش اللي تدور عليه؟"
+                aria-label="Search"
+              />
+
+              <button type="submit" class="btn btn-search  ">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <!-- Icons -->
+          <div class="d-flex position-relative ml-auto">
+            <a href="#" class="globe-icon-btn icon-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.37046 5.65669C4.43308 6.18493 4.76594 8.46273 5.57197 9.52669C6.64291 10.9403 7.64742 10.755 8.76386 12.1705C10.5694 14.4596 10.0761 17.8756 10.0761 18.8756M18 13H17C14.7909 13 13 14.7909 13 17V18M6.58661 1.99228C6.58661 2.81443 6.69943 3.87839 8.10193 4.57158C9.50443 5.26476 11.0198 4.92341 11.0198 6.90625C11.0198 7.18209 11.0198 8.91406 12.9922 8.91406C15.0177 8.94531 15.0177 7.2358 15.0177 6.90625C15.0177 6.25611 15.5447 6.00631 16.1949 6.00631H18M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                  stroke="#1A1A1A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+
+            <div class="dropdown-container hidden">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="language-tab">
+                  اللغة
+                </button>
+                <button class="tab-btn" data-tab="country-tab">الدولة</button>
+              </div>
+              <div class="tab-content">
+                <!-- Language Tab -->
+                <div id="language-tab" class="tab-panel active">
+                  <ul>
+                    <li>العربية</li>
+                    <li>الإنجليزية</li>
+                  </ul>
+                </div>
+                <!-- Country Tab -->
+                <div id="country-tab" class="tab-panel">
+                  <ul>
+                    <li>
+                      <div>
+                        <img
+                          src="assets/ksa.svg"
+                          alt="Saudi Flag"
+                          class="country-flag me-2"
+                        />
+                        <span class="name">السعودية</span>
+                      </div>
+                      <span class="currency">ريال سعودي</span>
+                    </li>
+                    <li>
+                      <div>
+                        <img
+                          src="assets/ksa.svg"
+                          alt="Saudi Flag"
+                          class="country-flag me-2"
+                        />
+                        <span class="name">عمان</span>
+                      </div>
+                      <span class="currency">ريال عماني</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="icon-btn"
+              ><svg
+                width="16"
+                height="20"
+                viewBox="0 0 16 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 8V4C5 2.34315 6.34315 1 8 1V1C9.65685 1 11 2.34315 11 4V8M14 6L14.9172 17.9233C14.9619 18.5041 14.5026 19 13.9201 19H2.07988C1.49737 19 1.03815 18.5041 1.08282 17.9233L2 6H14Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--  Submenu -->
+    <nav class="submenu d-lg-block d-none">
+      <div class="container-lg w-75">
+        <div
+          class="submenu-links d-flex justify-content-between align-items-center"
+          id="submenu-clothes"
+        >
+          <div class="submenu-start"></div>
+          <div class="submenu-center d-flex justify-content-center">
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+            <a href="#">ملابس</a>
+          </div>
+          <div class="submenu-end"></div>
+        </div>
+        <div
+          class="submenu-links submenu-link-makeup align-items-center d-none justify-content-center"
+          id="submenu-makeup"
+        >
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+          <a href="#">ميك أب</a>
+        </div>
+      </div>
+    </nav>
+    <div class="Navbar-Responsive d-lg-none d-blcok">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="col-4 d-flex align-items-center">
+          <a href="#" class="sidemenu-toggle menu-toggle-btn">
+            <i class="fas fa-bars-staggered"></i>
+          </a>
+        </div>
+        <a class="col-4 navbar-brand m-0" href="#"
+          ><img src="./assets/logo.png" alt="logo"
+        /></a>
+        <div class="col-4 text-end icons">
+          <a href="#" class="me-3 search-icon text-black">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="search-bar hidden">
+            <input
+              type="text"
+              placeholder="وش اللي تدور عليه؟"
+              class="search-input"
+            />
+          </div>
+          <a href="#" class="me-3 cart-icon text-black">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ! Navbar-Responsive -->
+
+    <!-- ! Hero Section -->
+    <section class="hero-section hero text-white">
+      <div class="hero-slider">
+        <div class="slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item">
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-block d-none img-cover"
+                />
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-none d-block img-cover"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-block d-none img-cover"
+                />
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-none d-block img-cover"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-block d-none img-cover"
+                />
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-none d-block img-cover"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-block d-none img-cover"
+                />
+                <img
+                  src="./assets/hero-bg.png"
+                  alt="hero-img"
+                  class="d-lg-none d-block img-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- ! shop section -->
+
+    <section class="shop-section">
+      <div class="container-lg">
+        <div class="row">
+          <!-- right-side -->
+          <div class="col-lg-4 right-s">
+            <div class="right-s-img position-relative">
+              <img src="./assets/shop-right-side.png" alt="" />
+
+              <div class="shop-text">
+                <p>شركائونا</p>
+              </div>
+
+              <div class="square-box">
+                <a href="#0">عرض الجميع</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- left-side -->
+
+          <div class="col-lg-8 left-s h-100 m-auto">
+            <div
+              class="d-flex flex-wrap justify-content-center align-items-center w-100"
+            >
+              <div class="left-s-text d-none">
+                <h3><a href="#0">البراندات</a></h3>
+                <p><a href="#0">عرض الجميع</a></p>
+              </div>
+
+              <div class="circle-container-1 w-100 d-flex">
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-x-twitter fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+              </div>
+
+              <div class="circle-container-2 w-100 d-flex">
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+
+                <a href="#0" class="circle">
+                  <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! shop collection  -->
+
+    <section class="shop-collection">
+      <div class="container-lg">
+        <!-- section-header -->
+        <div class="section-header">
+          <h2>تسوقى حسب التشكيلة</h2>
+        </div>
+
+        <div class="section-header-resp d-none">
+          <h3><a href="#0">الأقسام</a></h3>
+          <p><a href="#0">عرض الجميع</a></p>
+        </div>
+
+        <div
+          class="d-flex justify-content-between m-auto flex-wrap align-items-center text-center w-100 categories-container"
+        >
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-8.png" alt="" />
+              <p>فساتين</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-7.png" alt="" />
+              <p>أحذية</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-6.png" alt="" />
+              <p>ميك أب</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-5.png" alt="" />
+              <p>عباءات</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-4.png" alt="" />
+              <p>مجوهرات</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-3.png" alt="" />
+              <p>ملابس رياضية</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-2.png" alt="" />
+              <p>اكسسوارات</p>
+            </div>
+          </a>
+
+          <a href="#0">
+            <div class="category-box">
+              <img src="./assets/shop-sec-1.png" alt="" />
+              <p>الجمال والصحة</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! discount-card-section -->
+
+    <section class="discount-section">
+      <div class="container-lg position-relative">
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div
+          class="section-header d-flex justify-content-between align-items-center m-0 p-0"
+        >
+          <h2>تخفيضات</h2>
+          <a class="text-dark" href="#0">عرض الجميع</a>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                src="./assets/discount-50.png"
+                alt=""
+                class="discount-percent"
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                src="./assets/discount-75.png"
+                alt=""
+                class="discount-percent"
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-3.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-21.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-60.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-1.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-30.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! best-seller-section -->
+
+    <section class="discount-section">
+      <div class="container-lg position-relative">
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div
+          class="section-header d-flex justify-content-between align-items-center m-0 p-0"
+        >
+          <h2>الاكثر مبيعاً</h2>
+          <a class="text-dark" href="#0">عرض الجميع</a>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-3.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-21.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-2"
+                src="./assets/discount-info-2.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Ads Section -->
+
+    <section class="ads-section bg-dark w-100 position-relative">
+      <div class="container-lg position-relative">
+        <!-- row -->
+        <div class="row align-items-center justify-content-between h-100">
+          <div
+            class="col-lg-6 order-1 order-lg-0 px-4 my-3 px-lg-2 my-lg-5 card-ad"
+          >
+            <div class="position-relative">
+              <!-- Navigation buttons -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide card">
+                    <img
+                      class="discount-percent"
+                      src="./assets/discount-50.png"
+                      alt=""
+                    />
+                    <img
+                      class="discount-info-2"
+                      src="./assets/discount-info-2.png"
+                      alt=""
+                    />
+
+                    <div class="position-relative card-imgs-box">
+                      <img
+                        class="main-img"
+                        src="./assets/special-card-1.png"
+                        alt="product"
+                      />
+
+                      <a href="#0" class="hover-images">
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-12.png"
+                          alt="product"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-3.png"
+                          alt="sample1"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-2.png"
+                          alt="sample2"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                    >
+                      <a
+                        class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                        href="#0"
+                      >
+                        <i class="fa-brands fa-aws"></i>
+                      </a>
+                      <a href="#0">
+                        <span class="d-inline-block ms-2">aws</span>
+                      </a>
+                    </div>
+
+                    <a href="#0">
+                      <p class="text-truncate card-name">
+                        فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة،
+                        مناسب لعيد الشكر
+                      </p>
+                    </a>
+
+                    <div
+                      class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                    >
+                      <div class="card-price-info">
+                        <span
+                          class="old-price text-muted text-decoration-line-through"
+                          >25 ر.س</span
+                        >
+                        <span class="new-price ms-1">50 ر.س</span>
+                      </div>
+
+                      <div class="cart-icon">
+                        <a href="#0">
+                          <img src="./assets//cart-shop-icon.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <img
+                      class="discount-percent"
+                      src="./assets/discount-50.png"
+                      alt=""
+                    />
+                    <img
+                      class="discount-info-2"
+                      src="./assets/discount-info-2.png"
+                      alt=""
+                    />
+
+                    <div class="position-relative card-imgs-box">
+                      <img
+                        class="main-img"
+                        src="./assets/special-card-2.png"
+                        alt="product"
+                      />
+
+                      <a href="#0" class="hover-images">
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-12.png"
+                          alt="product"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-3.png"
+                          alt="sample1"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-2.png"
+                          alt="sample2"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                    >
+                      <a
+                        class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                        href="#0"
+                      >
+                        <i class="fa-brands fa-aws"></i>
+                      </a>
+                      <a href="#0">
+                        <span class="d-inline-block ms-2">aws</span>
+                      </a>
+                    </div>
+
+                    <a href="#0">
+                      <p class="text-truncate card-name">
+                        فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة،
+                        مناسب لعيد الشكر
+                      </p>
+                    </a>
+
+                    <div
+                      class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                    >
+                      <div class="card-price-info">
+                        <span
+                          class="old-price text-muted text-decoration-line-through"
+                          >25 ر.س</span
+                        >
+                        <span class="new-price ms-1">50 ر.س</span>
+                      </div>
+
+                      <div class="cart-icon">
+                        <a href="#0">
+                          <img src="./assets//cart-shop-icon.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <img
+                      class="discount-percent"
+                      src="./assets/discount-50.png"
+                      alt=""
+                    />
+                    <img
+                      class="discount-info-2"
+                      src="./assets/discount-info-2.png"
+                      alt=""
+                    />
+
+                    <div class="position-relative card-imgs-box">
+                      <img
+                        class="main-img"
+                        src="./assets/special-card-1.png"
+                        alt="product"
+                      />
+
+                      <a href="#0" class="hover-images">
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-12.png"
+                          alt="product"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-3.png"
+                          alt="sample1"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-2.png"
+                          alt="sample2"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                    >
+                      <a
+                        class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                        href="#0"
+                      >
+                        <i class="fa-brands fa-aws"></i>
+                      </a>
+                      <a href="#0">
+                        <span class="d-inline-block ms-2">aws</span>
+                      </a>
+                    </div>
+
+                    <a href="#0">
+                      <p class="text-truncate card-name">
+                        فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة،
+                        مناسب لعيد الشكر
+                      </p>
+                    </a>
+
+                    <div
+                      class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                    >
+                      <div class="card-price-info">
+                        <span
+                          class="old-price text-muted text-decoration-line-through"
+                          >25 ر.س</span
+                        >
+                        <span class="new-price ms-1">50 ر.س</span>
+                      </div>
+
+                      <div class="cart-icon">
+                        <a href="#0">
+                          <img src="./assets//cart-shop-icon.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <img
+                      class="discount-percent"
+                      src="./assets/discount-50.png"
+                      alt=""
+                    />
+                    <img
+                      class="discount-info-2"
+                      src="./assets/discount-info-2.png"
+                      alt=""
+                    />
+
+                    <div class="position-relative card-imgs-box">
+                      <img
+                        class="main-img"
+                        src="./assets/special-card-2.png"
+                        alt="product"
+                      />
+
+                      <a href="#0" class="hover-images">
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-12.png"
+                          alt="product"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-21.png"
+                          alt="sample1"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-2.png"
+                          alt="sample2"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                    >
+                      <a
+                        class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                        href="#0"
+                      >
+                        <i class="fa-brands fa-aws"></i>
+                      </a>
+                      <a href="#0">
+                        <span class="d-inline-block ms-2">aws</span>
+                      </a>
+                    </div>
+
+                    <a href="#0">
+                      <p class="text-truncate card-name">
+                        فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة،
+                        مناسب لعيد الشكر
+                      </p>
+                    </a>
+
+                    <div
+                      class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                    >
+                      <div class="card-price-info">
+                        <span
+                          class="old-price text-muted text-decoration-line-through"
+                          >25 ر.س</span
+                        >
+                        <span class="new-price ms-1">50 ر.س</span>
+                      </div>
+
+                      <div class="cart-icon">
+                        <a href="#0">
+                          <img src="./assets//cart-shop-icon.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide card">
+                    <img
+                      class="discount-percent"
+                      src="./assets/discount-50.png"
+                      alt=""
+                    />
+                    <img
+                      class="discount-info-2"
+                      src="./assets/discount-info-2.png"
+                      alt=""
+                    />
+
+                    <div class="position-relative card-imgs-box">
+                      <img
+                        class="main-img"
+                        src="./assets/special-card-1.png"
+                        alt="product"
+                      />
+
+                      <a href="#0" class="hover-images">
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-12.png"
+                          alt="product"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-3.png"
+                          alt="sample1"
+                        />
+                        <img
+                          class="product-image"
+                          src="./assets/card-sec-2.png"
+                          alt="sample2"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                    >
+                      <a
+                        class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                        href="#0"
+                      >
+                        <i class="fa-brands fa-aws"></i>
+                      </a>
+                      <a href="#0">
+                        <span class="d-inline-block ms-2">aws</span>
+                      </a>
+                    </div>
+
+                    <a href="#0">
+                      <p class="text-truncate card-name">
+                        فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة،
+                        مناسب لعيد الشكر
+                      </p>
+                    </a>
+
+                    <div
+                      class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                    >
+                      <div class="card-price-info">
+                        <span
+                          class="old-price text-muted text-decoration-line-through"
+                          >25 ر.س</span
+                        >
+                        <span class="new-price ms-1">50 ر.س</span>
+                      </div>
+
+                      <div class="cart-icon">
+                        <a href="#0">
+                          <img src="./assets//cart-shop-icon.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <img
+                class="w-100 mx-auto ps-0 my-2 my-lg-5 d-block special-ad"
+                src="./assets/special-left-side.png"
+                alt=""
+              />
+
+              <a
+                class="position-absolute bottom-0 w-100 start-0 py-2 view-more"
+                href="#0"
+              >
+                <span class="d-inline-block">عرض الجميع</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! for-you-section -->
+
+    <section class="for-you-section">
+      <div class="container-lg position-relative">
+        <!-- Navigation buttons -->
+
+        <div
+          class="section-header d-flex justify-content-between align-items-center m-0 p-0"
+        >
+          <h2>موصى لك</h2>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  class="discount-percent"
+                  src="./assets/discount-50.png"
+                  alt=""
+                />
+                <img
+                  class="discount-info-2"
+                  src="./assets/discount-info-2.png"
+                  alt=""
+                />
+
+                <div class="position-relative card-imgs-box">
+                  <img
+                    class="main-img"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+
+                  <a href="#0" class="hover-images">
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-12.png"
+                      alt="product"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-3.png"
+                      alt="sample1"
+                    />
+                    <img
+                      class="product-image"
+                      src="./assets/card-sec-2.png"
+                      alt="sample2"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="aws ms-1 d-flex align-items-baseline justify-content-start"
+                >
+                  <a
+                    class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                    href="#0"
+                  >
+                    <i class="fa-brands fa-aws"></i>
+                  </a>
+                  <a href="#0">
+                    <span class="d-inline-block ms-2">aws</span>
+                  </a>
+                </div>
+
+                <a href="#0">
+                  <p class="text-truncate card-name">
+                    فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                    لعيد الشكر
+                  </p>
+                </a>
+
+                <div
+                  class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+                >
+                  <div class="card-price-info">
+                    <span
+                      class="old-price text-muted text-decoration-line-through"
+                      >25 ر.س</span
+                    >
+                    <span class="new-price ms-1">50 ر.س</span>
+                  </div>
+
+                  <div class="cart-icon">
+                    <a href="#0">
+                      <img src="./assets//cart-shop-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination-container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination-for-you"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! new-products-section -->
+
+    <section class="discount-section new-products-section">
+      <div class="container-lg position-relative">
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div
+          class="section-header d-flex justify-content-between align-items-center m-0 p-0"
+        >
+          <h2>كل ما هو جديد</h2>
+          <a class="text-dark" href="#0">عرض الجميع</a>
+        </div>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                src="./assets/discount-50.png"
+                alt=""
+                class="discount-percent"
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-15-thin.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                src="./assets/discount-50.png"
+                alt=""
+                class="discount-percent"
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-14-thin.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-21.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-13-thin.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide card">
+              <img
+                class="discount-percent"
+                src="./assets/discount-50.png"
+                alt=""
+              />
+              <img
+                class="discount-info-1"
+                src="./assets/deliverd-early.png"
+                alt=""
+              />
+
+              <div class="position-relative card-imgs-box">
+                <img
+                  class="main-img"
+                  src="./assets/card-sec-1.png"
+                  alt="product"
+                />
+
+                <a href="#0" class="hover-images">
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-12.png"
+                    alt="product"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-3.png"
+                    alt="sample1"
+                  />
+                  <img
+                    class="product-image"
+                    src="./assets/card-sec-2.png"
+                    alt="sample2"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="aws ms-1 d-flex align-items-baseline justify-content-start"
+              >
+                <a
+                  class="text-dark shadow-sm px-2 mt-1 d-inline-block"
+                  href="#0"
+                >
+                  <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">aws</span>
+                </a>
+              </div>
+
+              <a href="#0">
+                <p class="text-truncate card-name">
+                  فستان LUNE Plus بربطة كتف وأزرار مزيفة وحاشية مكشكشة، مناسب
+                  لعيد الشكر
+                </p>
+              </a>
+
+              <div
+                class="card-price-and-icon-box d-flex align-items-center justify-content-between flex-nowrap mb-3 mx-2"
+              >
+                <div class="card-price-info">
+                  <span
+                    class="old-price text-muted text-decoration-line-through"
+                    >25 ر.س</span
+                  >
+                  <span class="new-price ms-1">50 ر.س</span>
+                </div>
+
+                <div class="cart-icon">
+                  <a href="#0">
+                    <img src="./assets//cart-shop-icon.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Footer -->
+
+    <footer class="footer">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-2 col-6 customer-service">
+            <h5>خدمة العملاء</h5>
+            <ul class="list-unstyled">
+              <li><a href="#0">الأسئلة الشائعة</a></li>
+              <li><a href="#0">سياسة الخصوصية</a></li>
+              <li><a href="#0">الشروط والأحكام</a></li>
+              <li><a href="#0">الشحن والإرجاع</a></li>
+              <li><a href="#0">طريقة الدفع</a></li>
+              <li><a href="#0">شروط الخدمة</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 fast-links">
+            <h5>روابط سريعة</h5>
+            <ul class="list-unstyled">
+              <li><a href="#0">المتجر</a></li>
+              <li><a href="#0">من نحن</a></li>
+              <li><a href="#0">اتصل بنا</a></li>
+              <li><a href="#0"> إنضم إلينا</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 subscribe-container">
+            <h5 class="mt-3 mt-lg-0">اشترك الآن</h5>
+            <p>اشترك الآن لتصلك أحدث الأخبار والموضة</p>
+            <div class="subscribe-input">
+              <input type="email" placeholder=" أدخل  الايميل أو رقم الحساب" />
+              <button>اشترك</button>
+            </div>
+            <div class="social-icons mt-3">
+              <a href="#0"><i class="fa-brands fa-whatsapp"></i> </a>
+              <a href="#0"><i class="fa-brands fa-twitter"></i> </a>
+              <a href="#0"><i class="fa-brands fa-google"></i></a>
+            </div>
+            <div
+              class="locations d-flex gap-4 justify-content-start mt-4 align-items-center"
+            >
+              <div
+                class="first-loc d-flex justify-content-between align-items-center"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">سلطنة عمان</span>
+                </a>
+              </div>
+              <div class="second-loc">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <a href="#0">
+                  <span class="d-inline-block ms-2">الريال العماني</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <i class="fa-regular fa-copyright"></i> جميع الحقوق محفوظة لتطوير 2025
+      </div>
+    </footer>
+
+    <!--! Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ! JQuery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ! Swiper -->
+    <script src="./Js/swiper.min.js"></script>
+    <script src="./Js/swiper8-bundle.min.js"></script>
+
+    <!--! Custom JavaScript -->
+    <script src="./Js/script.js"></script>
+  </body>
+</html>
