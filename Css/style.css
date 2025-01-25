@@ -1109,6 +1109,65 @@ a:hover {
   margin-left: 20px;
 }
 
+
+/* For you Swiper Pagination numbers */
+
+.for-you-section .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.for-you-section .swiper-pagination-number {
+  margin: 0 5px;
+  cursor: pointer;
+  color: #666;
+}
+
+.for-you-section .swiper-pagination-number.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.for-you-section .swiper-pagination-prev,
+.for-you-section .swiper-pagination-next {
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #000;
+}
+
+.for-you-section .swiper-pagination-prev:hover,
+.for-you-section .swiper-pagination-next:hover,
+.for-you-section .swiper-pagination-number:hover {
+  color: #007bff;
+}
+
+.for-you-section .swiper-pagination-for-you {
+  display: flex
+;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ! new-products-section */
 
 /* !  Footer */

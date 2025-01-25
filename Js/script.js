@@ -199,38 +199,128 @@ $(document).ready(function () {
 // ! for you section
 
 
+// $(document).ready(function () {
+//   document.querySelectorAll('.for-you-section').forEach((sliderContainer, index) => {
+//     // Add unique navigation classes for each slider
+//     let nextButton = sliderContainer.querySelector('.swiper-button-next');
+//     let prevButton = sliderContainer.querySelector('.swiper-button-prev');
+
+//     // Initialize Swiper for each slider container
+//     new Swiper(sliderContainer.querySelector('.swiper-container'), {
+//       slidesPerView: 2,
+//         spaceBetween: 20,
+//         navigation: {
+//             nextEl: nextButton,
+//             prevEl: prevButton,
+//         },
+//         breakpoints: {
+//               1024: {
+//                 slidesPerView: 4,
+//               },
+//               768: {
+//                 slidesPerView: 2,
+//               },
+//             }
+//             ,
+//       pagination: {
+//         el: '.for-you-section .swiper-pagination-for-you',
+//         type: 'custom',
+//         renderCustom: (swiper, current, total) => {
+//           let paginationHTML = '';
+//           for (let i = 1; i <= total; i++) {
+//             if (i === current) {
+//               paginationHTML += `<span class="swiper-pagination-number active">${i}</span>`;
+//             } else {
+//               paginationHTML += `<span class="swiper-pagination-number">${i}</span>`;
+//             }
+//           }
+//           return `<span class="swiper-pagination-prev"></span>${paginationHTML}<span class="swiper-pagination-next"></span>`;
+//         },
+//       },
+//     });
+// });
+// });
+
+
+// document.querySelector('.for-you-section .swiper-pagination-for-you').addEventListener('click', (e) => {
+//   if (e.target.classList.contains('swiper-pagination-number')) {
+//     const pageIndex = parseInt(e.target.textContent, 10) - 1;
+//     swiper.slideTo(pageIndex);
+//   } else if (e.target.classList.contains('swiper-pagination-prev')) {
+//     swiper.slidePrev();
+//   } else if (e.target.classList.contains('swiper-pagination-next')) {
+//     swiper.slideNext();
+//   }
+// });
+
+
+
 $(document).ready(function () {
   document.querySelectorAll('.for-you-section').forEach((sliderContainer, index) => {
-    // Add unique navigation classes for each slider
     let nextButton = sliderContainer.querySelector('.swiper-button-next');
     let prevButton = sliderContainer.querySelector('.swiper-button-prev');
 
-    // Initialize Swiper for each slider container
-    new Swiper(sliderContainer.querySelector('.swiper-container'), {
+    const swiperInstance = new Swiper(sliderContainer.querySelector('.swiper-container'), {
       slidesPerView: 2,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: nextButton,
-            prevEl: prevButton,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: nextButton,
+        prevEl: prevButton,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
         },
-        breakpoints: {
-              1024: {
-                slidesPerView: 4,
-              },
-              768: {
-                slidesPerView: 2,
-              },
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      pagination: {
+        el: '.for-you-section .swiper-pagination-for-you',
+        type: 'custom',
+        renderCustom: (swiper, current, total) => {
+          let paginationHTML = '';
+          const totalPages = total;
+          const pagesToShow = 4;
+
+          if (totalPages <= pagesToShow) {
+            // If there are fewer pages, show them all
+            for (let i = 1; i <= totalPages; i++) {
+              paginationHTML += `<span class="swiper-pagination-number ${i === current ? 'active' : ''}">${i}</span>`;
             }
-            ,
-            pagination: {
-              el: '.for-you-section .swiper-pagination-for-you',
-              type: 'fraction',
-              renderFraction: (currentClass, totalClass) => {
-                return '<span class="' + totalClass + '"></span>' +
-                                 
-                                 '<span class="' +  currentClass + '"></span>'
-                }
+          } else {
+            // Show the first 4 pages, and then continue showing subsequent pages as needed
+            const start = Math.max(current - 2, 1);
+            const end = Math.min(current + 3, totalPages);
+
+            // Show numbers before and after the current page
+            for (let i = start; i <= end; i++) {
+              paginationHTML += `<span class="swiper-pagination-number ${i === current ? 'active' : ''}">${i}</span>`;
+            }
+
+            // Show "..." if there are more pages after the current range
+            if (end < totalPages) {
+              paginationHTML += `<span>...</span><span class="swiper-pagination-number">${totalPages}</span>`;
+            }
           }
+
+          return `<span class="swiper-pagination-prev"></span>${paginationHTML}<span class="swiper-pagination-next"></span>`;
+        },
+      },
     });
+
+    // Handle pagination click to slide to the specific page
+    document.querySelector('.for-you-section .swiper-pagination-for-you').addEventListener('click', (e) => {
+      if (e.target.classList.contains('swiper-pagination-number')) {
+        const pageIndex = parseInt(e.target.textContent, 10) - 1;
+        swiperInstance.slideTo(pageIndex);
+      } else if (e.target.classList.contains('swiper-pagination-prev')) {
+        swiperInstance.slidePrev();
+      } else if (e.target.classList.contains('swiper-pagination-next')) {
+        swiperInstance.slideNext();
+      }
+    });
+  });
 });
-});
+
+
