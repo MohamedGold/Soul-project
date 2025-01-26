@@ -146,7 +146,7 @@ $(document).ready(function () {
 
     // Initialize Swiper for each slider container
     new Swiper(sliderContainer.querySelector('.swiper-container'), {
-      slidesPerView: 3,
+      slidesPerView: 2.5,
         spaceBetween: 20,
         navigation: {
             nextEl: nextButton,
