@@ -35,60 +35,7 @@
     <title>Soul Shop</title>
   </head>
   <body>
-    <!-- ! Main Nav -->
-    <div class="sidemenu">
-      <!-- Logo -->
-      <a class="sidemenu-brand-icon" href="#"
-        ><img src="assets/logo-without-name.png" alt="logo"
-      /></a>
-      <div class="main-links">
-        <!-- Language Dropdown -->
-        <div class="dropdown">
-          <div class="dropdown" id="dropdownMenuButton" data-toggle="dropdown">
-            <span class="selected-language">العربية</span>
-            <span class="caret"></span>
-          </div>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">العربية</a>
-            <a class="dropdown-item" href="#">الإنجليزية</a>
-          </div>
-        </div>
-
-        <!-- Categories Dropdown -->
-        <div class="dropdown">
-          <div class="dropdown" id="categoriesDropdown" data-toggle="dropdown">
-            <span class="selected-category">الأقسام</span>
-            <span class="caret"></span>
-          </div>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">قسم 1</a>
-            <a class="dropdown-item" href="#">قسم 2</a>
-            <a class="dropdown-item" href="#">قسم 3</a>
-          </div>
-        </div>
-
-        <!-- Country Dropdown -->
-        <div class="dropdown">
-          <div class="dropdown" id="countryDropdown" data-toggle="dropdown">
-            <span class="selected-country">الدولة</span>
-            <img src="assets/ksa.svg" alt="Flag" class="country-flag" />
-          </div>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">
-              <span>السعودية</span>
-              <img src="assets/ksa.svg" alt="Saudi Flag" class="country-flag" />
-            </a>
-            <a class="dropdown-item" href="#">
-              <span>الإمارات</span>
-              <img src="assets/ksa.svg" alt="UAE Flag" class="country-flag" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <span class="clss"><i class="fas fa-times"></i></span>
-    </div>
-
+    <!-- ! Main-nav -->
     <nav class="navbar d-lg-block d-none navbar-expand-lg bg-white">
       <div class="container d-flex justify-content-between align-items-center">
         <!-- Logo -->
@@ -120,15 +67,15 @@
               </button>
             </div>
             <!-- Search Box -->
-            <form class="ms-3 search-box position-relative ">
+            <form action="#" class="ms-3 search-box position-relative">
               <input
-                class="form-control "
+                class="form-control"
                 type="search"
                 placeholder="وش اللي تدور عليه؟"
                 aria-label="Search"
               />
 
-              <button type="submit" class="btn btn-search  ">
+              <button type="submit" class="btn btn-search">
                 <i class="fas fa-search"></i>
               </button>
             </form>
@@ -216,7 +163,7 @@
         </div>
       </div>
     </nav>
-    <!--  Submenu -->
+    <!-- ! Submenu -->
     <nav class="submenu d-lg-block d-none">
       <div class="container-lg w-75">
         <div
@@ -251,10 +198,13 @@
         </div>
       </div>
     </nav>
-    <div class="Navbar-Responsive d-lg-none d-blcok">
+    <!-- * ========================== -->
+
+    <!-- !Nav Responsive -->
+    <div class="Navbar-Responsive container-lg d-lg-none d-blcok">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="col-4 d-flex align-items-center">
-          <a href="#" class="sidemenu-toggle menu-toggle-btn">
+          <a href="#0" class="sidemenu-toggle menu-toggle-btn">
             <i class="fas fa-bars-staggered"></i>
           </a>
         </div>
@@ -262,7 +212,7 @@
           ><img src="./assets/logo.png" alt="logo"
         /></a>
         <div class="col-4 text-end icons">
-          <a href="#" class="me-3 search-icon text-black">
+          <a href="#" class="me-2 search-icon text-black">
             <i class="fas fa-search"></i>
           </a>
           <div class="search-bar hidden">
@@ -272,14 +222,74 @@
               class="search-input"
             />
           </div>
-          <a href="#" class="me-3 cart-icon text-black">
+          <a href="#" class="cart-icon text-black">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- ! Navbar-Responsive -->
+    <!-- !SideMenu Resp -->
+    <div class="sidemenu">
+      <!-- Logo -->
+      <a class="sidemenu-brand-icon" href="#"
+        ><img src="assets/logo-without-name.png" alt="logo"
+      /></a>
+      <div class="main-links">
+        <!-- Categories Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="categoriesDropdown" data-toggle="dropdown">
+            <span class="selected-category ms-3">الأقسام</span>
+            <span class="caret"></span>
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">قسم 1</a>
+            <a class="dropdown-item" href="#">قسم 2</a>
+            <a class="dropdown-item" href="#">قسم 3</a>
+          </div>
+        </div>
+
+        <!-- Country Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="countryDropdown" data-toggle="dropdown">
+            <span class="selected-country ms-3">الدولة</span>
+            <div>
+              <img src="assets/ksa.svg" alt="Flag" class="country-flag" />
+              <span class="caret"></span>
+            </div>
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">
+              <span>السعودية</span>
+              <img src="assets/ksa.svg" alt="Saudi Flag" class="country-flag" />
+            </a>
+            <a class="dropdown-item" href="#">
+              <span>الإمارات</span>
+              <img src="assets/ksa.svg" alt="UAE Flag" class="country-flag" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+          <div class="dropdown" id="dropdownMenuButton" data-toggle="dropdown">
+            <span class="selected-language ms-3">اللغة</span>
+            <span class="caret"></span>
+          </div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">العربية</a>
+            <a class="dropdown-item" href="#">الإنجليزية</a>
+          </div>
+        </div>
+
+        <!-- join us -->
+        <a href="#0" class="mt-5 d-inline-block ms-3"> انضم إلينا</a>
+      </div>
+
+      <span class="clss"><i class="fas fa-times"></i></span>
+    </div>
+
+    <!-- * =========================== -->
 
     <!-- ! Hero Section -->
     <section class="hero-section hero text-white">
@@ -349,7 +359,6 @@
     </section>
 
     <!-- ! shop section -->
-
     <section class="shop-section">
       <div class="container-lg">
         <div class="row">
@@ -437,7 +446,6 @@
     </section>
 
     <!-- ! shop collection  -->
-
     <section class="shop-collection">
       <div class="container-lg">
         <!-- section-header -->
@@ -513,7 +521,6 @@
     </section>
 
     <!-- ! discount-card-section -->
-
     <section class="discount-section">
       <div class="container-lg position-relative">
         <!-- Navigation buttons -->
@@ -1079,7 +1086,6 @@
     </section>
 
     <!-- ! best-seller-section -->
-
     <section class="discount-section">
       <div class="container-lg position-relative">
         <!-- Navigation buttons -->
@@ -1645,7 +1651,6 @@
     </section>
 
     <!-- ! Ads Section -->
-
     <section class="ads-section bg-dark w-100 position-relative">
       <div class="container-lg position-relative">
         <!-- row -->
@@ -2075,7 +2080,6 @@
     </section>
 
     <!-- ! for-you-section -->
-
     <section class="for-you-section">
       <div class="container-lg position-relative">
         <!-- Navigation buttons -->
@@ -3658,7 +3662,6 @@
               </div>
             </div>
 
-            
             <div class="swiper-slide">
               <div class="card">
                 <img
@@ -3973,7 +3976,6 @@
               </div>
             </div>
 
-            
             <div class="swiper-slide">
               <div class="card">
                 <img
@@ -4288,7 +4290,6 @@
               </div>
             </div>
 
-            
             <div class="swiper-slide">
               <div class="card">
                 <img
@@ -4603,7 +4604,6 @@
               </div>
             </div>
 
-            
             <div class="swiper-slide">
               <div class="card">
                 <img
@@ -4918,7 +4918,6 @@
               </div>
             </div>
 
-            
             <div class="swiper-slide">
               <div class="card">
                 <img
@@ -5244,7 +5243,6 @@
     </section>
 
     <!-- ! new-products-section -->
-
     <section class="discount-section new-products-section">
       <div class="container-lg position-relative">
         <!-- Navigation buttons -->
@@ -5810,7 +5808,6 @@
     </section>
 
     <!-- ! Footer -->
-
     <footer class="footer">
       <div class="container-lg">
         <div class="row">

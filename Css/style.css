@@ -22,6 +22,11 @@ a:hover {
   color: inherit;
 }
 
+.btn:focus {
+    box-shadow: none !important;
+    outline: 0;
+}
+
 /* !Main Nav */
 .sidemenu-toggle {
   position: relative;
@@ -48,13 +53,21 @@ a:hover {
   z-index: 999;
   transform: translateY(-100%);
   overflow: hidden;
-  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s linear 0.5s;
+  transition: .3s ease;
   color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
 }
 
 /* .sidemenu .navbar {
@@ -63,9 +76,14 @@ a:hover {
 } */
 
 .sidemenu .main-links {
-  display: block;
-  padding: 0 5vw;
-  width: 100%;
+    display: block;
+    padding: 0 5vw;
+    width: 100%;
+    /* margin-top: -150px; */
+    position: relative;
+    bottom: 27%;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
 }
 
 .sidemenu .clss {
@@ -153,8 +171,9 @@ a:hover {
   text-align: center;
   width: 100%;
   display: block;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-block: 60px;
+  margin-bottom: 150px;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
 }
 .sidemenu .sidemenu-brand-icon img {
   max-height: 100%;
@@ -871,16 +890,14 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-/* !Swiper-container-resp-full */
-.swiper-container {
-  overflow: visible !important;
+  /* !Swiper-container-resp-full */
+  .swiper-container {
+    overflow: visible !important;
+  }
+  .ads-section .swiper-container {
+    overflow: hidden !important;
+  }
 }
-.ads-section .swiper-container {
-  overflow: hidden !important;
-}
-
-}
-
 
 /* hover images */
 

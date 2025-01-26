@@ -4,25 +4,71 @@
 // !Navbar
 
 
+// // When the menu toggle button is clicked, open the side menu
+// $(".menu-toggle-btn").on("click", function () {
+//   $(".sidemenu").css({
+//       "transform": "translateY(0)",
+//       "opacity": "1",
+//       "visibility": "visible"
+//   });
+//   $(".sidemenu").addClass("open");
+// });
+
+// // When the close button is clicked, close the side menu
+// $(".clss").on("click", function () {
+//   $(".sidemenu").css({
+//       "transform": "translateY(-100%)",
+//       "opacity": "0",
+//       "visibility": "hidden"
+//   });
+//   $(".sidemenu").removeClass("open");
+// });
+
+
 // When the menu toggle button is clicked, open the side menu
 $(".menu-toggle-btn").on("click", function () {
   $(".sidemenu").css({
-      "transform": "translateY(0)",
-      "opacity": "1",
-      "visibility": "visible"
-  });
-  $(".sidemenu").addClass("open");
+    "transform": "translateY(0)",
+    "opacity": "1",
+    "visibility": "visible"
+  }).addClass("open");
 });
 
-// When the close button is clicked, close the side menu
-$(".clss").on("click", function () {
+// Close menu function
+function closeSideMenu() {
   $(".sidemenu").css({
-      "transform": "translateY(-100%)",
-      "opacity": "0",
-      "visibility": "hidden"
-  });
-  $(".sidemenu").removeClass("open");
+    "transform": "translateY(-100%)",
+    "opacity": "0",
+    "visibility": "hidden"
+  }).removeClass("open");
+}
+
+// When the close button is clicked
+$(".clss").on("click", closeSideMenu);
+
+// Close menu when clicking outside
+$(document).on("click", function (e) {
+  if ($(".sidemenu").hasClass("open")) {
+    // Check if click is outside of sidemenu and not on the toggle button
+    if (!$(e.target).closest(".sidemenu").length && !$(e.target).closest(".menu-toggle-btn").length) {
+      closeSideMenu();
+    }
+  }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const globeIcon = document.querySelector(".globe-icon-btn");
@@ -135,7 +181,6 @@ const swiper = new Swiper('.slider', {
 
 
 
-
 // ! card Swiper
 
 $(document).ready(function () {
@@ -197,62 +242,6 @@ $(document).ready(function () {
 
 
 // ! for you section
-
-
-// $(document).ready(function () {
-//   document.querySelectorAll('.for-you-section').forEach((sliderContainer, index) => {
-//     // Add unique navigation classes for each slider
-//     let nextButton = sliderContainer.querySelector('.swiper-button-next');
-//     let prevButton = sliderContainer.querySelector('.swiper-button-prev');
-
-//     // Initialize Swiper for each slider container
-//     new Swiper(sliderContainer.querySelector('.swiper-container'), {
-//       slidesPerView: 2,
-//         spaceBetween: 20,
-//         navigation: {
-//             nextEl: nextButton,
-//             prevEl: prevButton,
-//         },
-//         breakpoints: {
-//               1024: {
-//                 slidesPerView: 4,
-//               },
-//               768: {
-//                 slidesPerView: 2,
-//               },
-//             }
-//             ,
-//       pagination: {
-//         el: '.for-you-section .swiper-pagination-for-you',
-//         type: 'custom',
-//         renderCustom: (swiper, current, total) => {
-//           let paginationHTML = '';
-//           for (let i = 1; i <= total; i++) {
-//             if (i === current) {
-//               paginationHTML += `<span class="swiper-pagination-number active">${i}</span>`;
-//             } else {
-//               paginationHTML += `<span class="swiper-pagination-number">${i}</span>`;
-//             }
-//           }
-//           return `<span class="swiper-pagination-prev"></span>${paginationHTML}<span class="swiper-pagination-next"></span>`;
-//         },
-//       },
-//     });
-// });
-// });
-
-
-// document.querySelector('.for-you-section .swiper-pagination-for-you').addEventListener('click', (e) => {
-//   if (e.target.classList.contains('swiper-pagination-number')) {
-//     const pageIndex = parseInt(e.target.textContent, 10) - 1;
-//     swiper.slideTo(pageIndex);
-//   } else if (e.target.classList.contains('swiper-pagination-prev')) {
-//     swiper.slidePrev();
-//   } else if (e.target.classList.contains('swiper-pagination-next')) {
-//     swiper.slideNext();
-//   }
-// });
-
 
 
 $(document).ready(function () {
