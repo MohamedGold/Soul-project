@@ -414,18 +414,17 @@ a:hover {
 }
 
 .submenu-links::before {
-  content: "";
-  position:absolute;
+  content: '';
+  position: absolute;
   width: 110px;
   height: 100%;
   right: 0;
   background-color: #ffff;
-
 }
 
 .submenu-link-makeup::before {
-    content: "";
-  position:absolute;
+  content: '';
+  position: absolute;
   width: 234px;
   height: 100%;
   right: 0;
@@ -871,6 +870,18 @@ a:hover {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+/* !Swiper-container-resp-full */
+.swiper-container {
+  overflow: visible !important;
+}
+.ads-section .swiper-container {
+  overflow: hidden !important;
+}
+
+}
+
+
 /* hover images */
 
 .discount-section .card .main-img,
@@ -1109,7 +1120,6 @@ a:hover {
   margin-left: 20px;
 }
 
-
 /* For you Swiper Pagination numbers */
 
 .for-you-section .swiper-pagination {
@@ -1146,27 +1156,13 @@ a:hover {
 }
 
 .for-you-section .swiper-pagination-for-you {
-  display: flex
-;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ========================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ! new-products-section */
 
