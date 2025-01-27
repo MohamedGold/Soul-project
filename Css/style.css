@@ -1086,12 +1086,15 @@ a:hover {
     left: -20px !important;
     padding: 20px !important;
   }
-}
 
   .ads-section .swiper-button-next:after,
   .ads-section .swiper-button-prev:after {
     font-size: 20px;
   }
+}
+
+
+
 
 /* ! for-you-section */
 
