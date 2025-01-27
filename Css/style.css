@@ -27,6 +27,14 @@ a:hover {
     outline: 0;
 }
 
+
+
+/* *============================================================ */
+
+
+
+
+
 /* !Main Nav */
 .sidemenu-toggle {
   position: relative;
@@ -284,7 +292,8 @@ a:hover {
     top: 0;
   }
 
-  /* ==================== */
+ /* *============================================================ */
+
 
 .Navbar-Responsive .search-input::placeholder {
   color: #aaa;
@@ -481,6 +490,12 @@ a:hover {
 } */
 }
 
+
+
+/* *============================================================ */
+
+
+
 /* ! Hero Section */
 
 .hero img {
@@ -560,6 +575,11 @@ a:hover {
   }
 }
 
+
+/* *============================================================ */
+
+
+
 /* ! shop section */
 
 /* right-side */
@@ -619,8 +639,8 @@ a:hover {
 /* left-side */
 
 .shop-section .left-s .circle {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: #fff;
   display: flex;
@@ -680,7 +700,7 @@ a:hover {
   }
 
   .shop-section .left-s .circle i {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .shop-section .right-s-img {
@@ -759,7 +779,11 @@ a:hover {
   }
 }
 
-/* ! discount-card-section */
+
+/* *============================================================ */
+
+
+/* ! cards */
 
 .discount-section,
 .ads-section,
@@ -1094,7 +1118,7 @@ a:hover {
 }
 
 
-
+/* *============================================================ */
 
 /* ! for-you-section */
 
@@ -1194,7 +1218,8 @@ a:hover {
   align-items: center;
 }
 
-/* ========================= */
+/* *============================================================ */
+
 
 /* ! new-products-section */
 
@@ -1314,6 +1339,7 @@ a:hover {
   }
 }
 
+/* *============================================================ */
 
 
 
