@@ -723,6 +723,10 @@ body.no-scroll {
     row-gap: 0;
   }
 
+  .shop-collection .swiper-container {
+    overflow: hidden !important;
+  }
+
   .shop-section .left-s .circle i {
     font-size: 22px;
   }
@@ -1006,7 +1010,7 @@ body.no-scroll {
 
 @media (max-width: 768px) {
   /* !Swiper-container-resp-full */
-  .swiper-container {
+.discount-section   .swiper-container {
     overflow: visible !important;
   }
   .ads-section .swiper-container {
