@@ -727,6 +727,14 @@ body.no-scroll {
   .shop-section .left-s-text {
     display: flex !important;
   }
+
+  .shop-section .left-s .left-s-text h3 a {
+    font-size: 20px !important;
+  }
+
+  .shop-collection .section-header-resp h3 a {
+    font-size: 20px !important;
+  }
 }
 
 /* ! shop collection */
