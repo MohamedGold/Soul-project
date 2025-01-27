@@ -569,18 +569,27 @@ body.no-scroll {
     padding-inline: 5px !important;
         width: 100px !important;
         gap: 0 !important;
+
+        display: flex;
+        align-items: center !important;
+        
   }
 
   .swiper-pagination-bullet {
     width: 20px !important;
-    height: 10px !important;
+    height: 5px !important;
     border-radius: 5px !important;
   }
 
   .swiper-pagination-bullet-active {
-    width: 10px !important;
-    height: 10px !important;
-  }
+  width: 7px !important;
+  height: 5px !important;
+  border-radius: 50% !important ;
+  -webkit-border-radius: 50% !important ;
+  -moz-border-radius: 50% !important ;
+  -ms-border-radius: 50% !important ;
+  -o-border-radius: 50% !important ;
+}
 }
 
 
