@@ -10,6 +10,7 @@ $(".menu-toggle-btn").on("click", function () {
     "opacity": "1",
     "visibility": "visible"
   }).addClass("open");
+  $("body").css("overflow-y", "hidden");
 });
 
 // Close menu function
@@ -19,6 +20,9 @@ function closeSideMenu() {
     "opacity": "0",
     "visibility": "hidden"
   }).removeClass("open");
+  $("body").css("overflow-y", "auto");
+
+
 }
 
 // When the close button is clicked
@@ -31,11 +35,55 @@ $(document).on("click", function (e) {
     if (!$(e.target).closest(".sidemenu").length && !$(e.target).closest(".menu-toggle-btn").length) {
       closeSideMenu();
     }
+    
   }
+
+  
 });
 
 
 
+
+
+
+
+
+
+
+
+
+
+// ! autocomplete-search-results
+
+// $(function () {
+//   var availableTags = [
+//     "ActionScript",
+//     "AppleScript",
+//     "Asp",
+//     "BASIC",
+//     "C",
+//     "C++",
+//     "Clojure",
+//     "COBOL",
+//     "ColdFusion",
+//     "Erlang",
+//     "Fortran",
+//     "Groovy",
+//     "Haskell",
+//     "Java",
+//     "JavaScript",
+//     "Lisp",
+//     "Perl",
+//     "PHP",
+//     "Python",
+//     "Ruby",
+//     "Scala",
+//     "Scheme"
+//   ];
+//   $("#tags").autocomplete({
+//     source: availableTags
+//   });
+// });
 
 
 
@@ -85,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// ! search toggle
+// ! search toggle-responsive
 
 const searchIcon = document.querySelector('.search-icon');
 const searchBar = document.querySelector('.search-bar');
