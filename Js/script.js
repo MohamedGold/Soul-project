@@ -3,28 +3,6 @@
 
 // !Navbar
 
-
-// // When the menu toggle button is clicked, open the side menu
-// $(".menu-toggle-btn").on("click", function () {
-//   $(".sidemenu").css({
-//       "transform": "translateY(0)",
-//       "opacity": "1",
-//       "visibility": "visible"
-//   });
-//   $(".sidemenu").addClass("open");
-// });
-
-// // When the close button is clicked, close the side menu
-// $(".clss").on("click", function () {
-//   $(".sidemenu").css({
-//       "transform": "translateY(-100%)",
-//       "opacity": "0",
-//       "visibility": "hidden"
-//   });
-//   $(".sidemenu").removeClass("open");
-// });
-
-
 // When the menu toggle button is clicked, open the side menu
 $(".menu-toggle-btn").on("click", function () {
   $(".sidemenu").css({
@@ -68,7 +46,7 @@ $(document).on("click", function (e) {
 
 
 
-
+// ! main-nav toggle-menu
 
 document.addEventListener("DOMContentLoaded", () => {
   const globeIcon = document.querySelector(".globe-icon-btn");
@@ -106,25 +84,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const searchIcon = document.querySelector(".search-icon");
-  const searchBar = document.querySelector(".search-bar");
 
-  // Toggle search bar visibility
-  searchIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    searchBar.classList.toggle("hidden");
-  });
+// ! search toggle
 
-  // Optional: Close the search bar when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!searchBar.contains(e.target) && !searchIcon.contains(e.target)) {
-      searchBar.classList.add("hidden");
-    }
-  });
+const searchIcon = document.querySelector('.search-icon');
+const searchBar = document.querySelector('.search-bar');
+
+searchIcon.addEventListener('click', (e) => {
+  e.preventDefault(); 
+  searchBar.classList.toggle('hidden'); 
 });
 
 
+// ! submenu switching
 
 // Initialize submenus and buttons
 const categoryButtons = document.querySelectorAll(".category-button");

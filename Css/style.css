@@ -255,30 +255,37 @@ a:hover {
 .navbar .tab-panel li:hover {
   background: #f5f5f5;
 }
+
+
+/* ! Responsive form Search-bar */
+
 .Navbar-Responsive .search-bar {
-  z-index: 50;
-  position: absolute;
-  top: 60px; /* Adjust based on your layout */
-  left: 50px; /* Adjust based on your layout */
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.Navbar-Responsive .search-bar.hidden {
-  display: none;
-}
-.Navbar-Responsive .search-input {
-  border: none;
-  outline: none;
-  padding: 5px;
-  font-size: 14px;
-  width: 200px;
-}
+    display: none; 
+  }
+
+  .Navbar-Responsive .search-bar.hidden {
+    display: none;
+  }
+
+  .Navbar-Responsive .search-bar {
+    display: block;  
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    width: 100%;
+  }  
+
+  .Navbar-Responsive .form-control {
+    flex-grow: 1;
+  }
+
+  .Navbar-Responsive .btn-search-resp {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* ==================== */
+
 .Navbar-Responsive .search-input::placeholder {
   color: #aaa;
 }
@@ -1081,6 +1088,11 @@ a:hover {
   }
 }
 
+  .ads-section .swiper-button-next:after,
+  .ads-section .swiper-button-prev:after {
+    font-size: 20px;
+  }
+
 /* ! for-you-section */
 
 .for-you-section .card {
@@ -1298,3 +1310,17 @@ a:hover {
     margin-right: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
