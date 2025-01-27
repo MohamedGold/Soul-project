@@ -231,6 +231,38 @@ $(document).ready(function () {
 
 
 
+// !brand-slider
+
+$(document).ready(function () {
+  document.querySelectorAll('.left-s').forEach((sliderContainer, index) => {
+  
+
+    // Initialize Swiper for each slider container
+    new Swiper(sliderContainer.querySelector('.swiper-container'), {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      
+      breakpoints: {
+        1024: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
+        },
+      }
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
 // ! ads-section
 
 $(document).ready(function () {
