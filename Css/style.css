@@ -753,6 +753,10 @@ body.no-scroll {
 .shop-section .left-s .left-s-text p a {
     font-size: 13px !important;
 }
+
+.shop-collection .swiper-slide {
+  margin-block: 10px !important ;
+}
 }
 
 /* ! shop collection-Category  */
